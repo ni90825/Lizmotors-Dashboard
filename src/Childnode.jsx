@@ -15,7 +15,18 @@ const Childnode = (props) => {
     const [nodeinput,setNodeinput]=useState("");
     const refofgraph=useRef();
     const refofinput=useRef();
+    const [isitopen,setIsitopen]=useState(false);
+    const eventfun=(event)=>{
+        // console.log(event.target!=targetRef.current,isitopen,targetRef.current.contains(event.target),event.target,targetRef.current,refofinput.current.style.display)
+if(event.target!=targetRef.current && !targetRef.current.contains(event.target) && refofinput.current.style.display=="block"){
+            refofinput.current.style.display="none";
+            refofgraph.current.style.display="none";
+        }
+    }
+useEffect(()=>{
+    window.addEventListener("touchstart",eventfun)
 
+},[])
     useEffect(()=>{
         if(targetRef.current){
         gsap.to(".nodestylechild", {opacity: 1})
@@ -50,18 +61,14 @@ const Childnode = (props) => {
             if(refofgraph.current){
                 targetRef.current.addEventListener("touchstart",(()=>{
                         refofgraph.current.style.display="block";
+                        setIsitopen(true);
             }))
-    //         targetRef.current.addEventListener("touchend",(()=>{
-    //             refofgraph.current.style.display="none";
-    // }))
         }
         if(refofinput.current){
                 targetRef.current.addEventListener("touchstart",(()=>{
                         refofinput.current.style.display="block";
+                        setIsitopen(true);
             }))
-    //         targetRef.current.addEventListener("touchend",(()=>{
-    //             refofinput.current.style.display="none";
-    // }))
         }
         }
 
