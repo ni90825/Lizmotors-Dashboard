@@ -60,7 +60,7 @@ function App() {
                 start={items.parentref1} 
                 end= {items.childref}
                 color={"black"}
-                zIndex={0}
+                zIndex={-10}
                 strokeWidth={1}
                 animateDrawing={0.2}
                 dashness={false}

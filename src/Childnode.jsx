@@ -28,7 +28,8 @@ const Childnode = (props) => {
         setTemporaryref((prevtemporaryref)=>{
             return [...prevtemporaryref,{parentref1:childnodes[childnodes.length-1].childparentref,childref:targetRef}]
         }) 
-        if(refofgraph.current){
+        if(window.innerWidth > 764){
+            if(refofgraph.current){
                 targetRef.current.addEventListener("mouseover",(()=>{
                         refofgraph.current.style.display="block";
             }))
@@ -44,6 +45,26 @@ const Childnode = (props) => {
                 refofinput.current.style.display="none";
     }))
         }
+        }
+        else{
+            if(refofgraph.current){
+                targetRef.current.addEventListener("touchstart",(()=>{
+                        refofgraph.current.style.display="block";
+            }))
+    //         targetRef.current.addEventListener("touchend",(()=>{
+    //             refofgraph.current.style.display="none";
+    // }))
+        }
+        if(refofinput.current){
+                targetRef.current.addEventListener("touchstart",(()=>{
+                        refofinput.current.style.display="block";
+            }))
+    //         targetRef.current.addEventListener("touchend",(()=>{
+    //             refofinput.current.style.display="none";
+    // }))
+        }
+        }
+
     }
     },[])
 

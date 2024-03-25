@@ -89,6 +89,7 @@
    z-index: 4;
 }
 .barsectioninput{
+    z-index: 4;
     left:0%;
     width:50%;
     padding:5px;
@@ -123,6 +124,9 @@
         right:60%;
         bottom:-20%;
         top:unset;
+    }
+    .plus {
+        z-index: 0;
     }
 }
   
