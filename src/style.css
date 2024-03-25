@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.nodestyle{
+    width:180px;
+    border-radius: 10px;
+    color: rgb(13 10 10);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight:550;
+    font-size:15px;
+    height:70px;
+    position: relative;
+}
+.nodestylechild{
+    position: absolute;
+
+}
+.nodestyle > div:first-child{
+    position: relative;
+    top:34%;
+    max-height: max-content;
+}
+.firstphase{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    flex: auto;
+    margin-left:10px;
+    margin-top:80px;
+    gap:20px;
+}
+.plusicon{
+    width:16px;
+    height:auto;
+    object-fit: fill;
+    cursor: pointer;
+}
+.plus{
+    position: absolute;
+    right: -3%;
+    top: 40%;
+    z-index: 1;
+}
+.nodestylechild{
+    opacity:0;
+}
+.nodestylechild .inputsection{
+    width:95%;
+    height:95%;
+    outline:0px;
+    background-color:transparent;
+    border-radius:10px;
+    border:0px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight:550;
+    font-size:15px;   
+    text-align: center;
+}
+.mainheading{
+    font-family: "Poppins";
+    font-style: normal;
+    font-size:2.4vw;
+    font-weight:550;
+}
+.subheading{
+    font-family: "Poppins";
+    font-style: normal;
+    font-size:1.4vw;
+    font-weight:400;
+}
+.mainapp{
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+    height:86vh;
+}
+
+.barsection{
+    position:absolute;
+    background-color:rgb(227, 227, 227);
+    top:-150%;
+    left:70%;
+    width:120%;
+    height:auto;
+    z-index: 2;
+   display:none;
+   border-radius: 10px;
+   z-index: 4;
+}
+.barsectioninput{
+    left:0%;
+    width:50%;
+    padding:5px;
+    top:-200%;
+    border-radius: 2px;
+    z-index: 4;
+}
+.barsectioninput input{
+    background-color:white;
+    width:90% !important;
+    border-radius:10px;
+    margin: auto;
+    border: 1px solid rgb(219, 219, 219);
+
+}
+.barsectioninput label{
+    text-align: left;
+    font-size:14px;
+    font-weight:450;
+}
+
+@media only screen and (max-width: 764px) {
+    .firstphase{
+        flex-direction:row;
+    }
+    .mainapp{
+        overflow-x: scroll;
+        margin-right:6px;
+    }
+    .plus{
+        left:47%;
+        right:60%;
+        bottom:-20%;
+        top:unset;
+    }
+}
+  
+@media only screen and (max-width: 678px) {
+    .mainheading{
+        font-size:7vw;
+    }
+    .subheading{
+        font-size:4.5vw;
+    }
+    .mainapp{
+    position: relative;
+}
+}
+ 
